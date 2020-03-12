@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAV-BAR*/
+nav {
+    background-color: black;
+    height: 3em;
+    text-align: right;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+    
+
+li {
+    display: inline-block;
+    margin-right: 8vw;
+   margin-top: 10px;
+  
+}
+
+li a {
+    color:white;
+  
+    font-size: 2vw; 
+}
+
+
+li a:hover  {
+    color: green;
+    text-decoration: underline;
+    
+}
+
+
+
+@media (max-width: 700px) {
+    
+    nav {
+        text-align: center;
+        margin:auto;
+        
+    }
+
+    li a {
+font-size: 4vw; 
+    }
+}
+
+@media (min-width: 700px) {
+    #navbar li:last-child{
+        display: none;
+     
+     }
+}
+
+
+/* WELCOME SECTION*/
+
+#welcome-section {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+#welcome-section h1 {
+    font-size: 2em;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+#welcome-section h2 {
+    position:absolute;
+    top:60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+
+h2 {
+    position: relative;
+    color: rgba(175, 173, 173, 0.3);
+    
+}
+h2:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 10em;
+    white-space: nowrap;
+    color: #fff;
+    animation: loading 3s infinite  linear;
+}
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+}
+
+
+
+/* PROJECTS SECTION*/
+
+
+
+
+
+
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    justify-content: center;
+    
+    
+}
+
+#projects div{
+    
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 10%;
+  
+    
+}
+#projects .project-tile {
+    margin:auto;
+    margin-top:  50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 150px;
+   padding-bottom: 65px;
+    text-align: center;
+    border: 2px black solid;
+}
+#projects .project-tile p {
+    font-size: 1.5em;
+    color:black;
+}
+
+#projects img {
+    height:  100%;
+    
+
+}
+
+@media (max-width: 700px) {
+    #projects div {
+        margin:auto;
+        margin-top:  50px;
+       
+   
+    }
+}
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+   padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+    cursor: pointer;
+    }
+
+
+
+/*FOOTER SECTION*/
+footer {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1em;
+}
+#contact i {
+    font-size: 2.5em;
+    color: rgba(255, 255, 255, 0.479);
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#contact .fa-github:hover{
+    transition: .5s;
+    color: white;
+}
+
+#contact .fa-free-code-camp:hover{
+    transition: .5s;
+    color: green;
+}
+
+#contact .fa-codepen:hover{
+    transition: .5s;
+    color: white;
+}
+
+
+#contact p {
+    color: white;
+    font-size: 1.5em;
+    
+}
+
+
+
+@media (max-width: 700px) {
+    footer {
+        
+      width: 100%;
+       
+        display: inline-block;    
+    }
+
+    #contact i {
+       font-size: 5em;
+       margin-top: .5em;
+       
+       color:white;
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    footer {
+        background-color: black;
+        
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        height: 2.7em;
+        bottom: 0;
+    }
+    #contact i{
+        margin-left: 50px;
+    }
+
+    #contact p {
+        display:none;
+    }
+}
